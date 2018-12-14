@@ -1,0 +1,61 @@
+body {
+    background-color: #101010;
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+}
+
+header {
+    height: 50px;
+    background-color: #808080;
+}
+
+header h2 {
+    display: inline-block;
+    margin: 0;
+    padding-top: 10px;
+    color: black;
+}
+
+nav {
+    float: right;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+    min-width: 350px;
+}
+
+header .container {
+    height: 100%;
+}
+
+#about-slim {
+    margin-top: 100px;
+}
+
+#profile-pic {
+    height: auto;
+    width: 179px;
+    position: absolute;
+    left: 0;
+    top: -20px;
+    border: 1px solid #4f84c4;
+    border-radius: 20px;
+}
+
+#about-header {
+    display: inline-block;
+    height: 100px;
+    background-color: #4f84c4;
+    width: 100%;
+    position: relative;
+    border-radius: 10px;
+}
+
+#main-heading {
+    padding: 10px 5px 0 189px;
+    margin: 0;
+}
