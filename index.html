@@ -12,8 +12,6 @@
       integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
       crossorigin="anonymous"
     />
-    <!-- Meyer Reset -->
-    <!-- <link rel="stylesheet" href="./assets/css/reset.css" /> -->
     <!-- jQuery -->
     <script
       src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -27,6 +25,11 @@
       integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
       crossorigin="anonymous"
     />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=PT+Serif|PT+Serif+Caption"
+      rel="stylesheet"
+    />
     <!-- My CSS -->
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
@@ -35,19 +38,25 @@
     <header>
       <div class="container">
         <h2>David Knittel</h2>
+        <hr />
         <nav>
-          <a href="#about-slim">About</a> <a href="#">Portfolio</a>
-          <a href="#">Contact</a>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
         </nav>
       </div>
     </header>
 
     <div class="container">
-      <div id="about">
+      <section id="about">
         <div id="about-header">
-          <img id="profile-pic" src="./assets/images/dave.jpg" />
+          <img
+            id="profile-pic"
+            src="./assets/images/dave.jpg"
+            alt="David Knittel"
+          />
           <h1 id="main-heading">
-            David Knittel: An awesome new member of the coding community with a
+            David Knittel: An excited new member of the coding community with a
             hunger for knowledge.
           </h1>
         </div>
@@ -68,7 +77,7 @@
             proofs gave me an understanding of the same logical structures that
             are used in programming. I am able to succeed in fast paced,
             team-driven environments. I can follow directions well, or take
-            initiative where appropriate.<span class="end-placeholder">&nbsp;</span> 
+            initiative where appropriate.
           </p>
           <p class="about">
             I was born and raised in Manhattan KS. After graduating high school,
@@ -80,7 +89,6 @@
             warehouse. Despite the naturally rewarding nature of my careers in
             pizza-making and general warehouse work, I have decided that it is
             now time to pursue a new career in web development.
-            <span class="end-placeholder">&nbsp;</span>
           </p>
           <p class="about">
             My interests include all things related to math, science, and music.
@@ -90,18 +98,111 @@
             those required to be good at math. I am currently working to
             establish and sharpen my skills as a web developer. As I continue to
             build my knowledge of web-based development, I hope to also continue
-            to expand my knowledge to include other areas of software
-            development.<span class="end-placeholder">&nbsp;</span>
+            to expand my knowledge to include other areas of software development.
           </p>
         </div>
         <button type="button" id="toggle-about-basic" state="closed">
-          <span>Show More</span>
-          <i class="fas fa-arrow-down"></i>
+          <span>Show More</span> <i class="fas fa-arrow-down"></i>
         </button>
-      </div>
-    </div>
-  </body>
+      </section>
 
-  <!-- Linking my javascript -->
-  <script src="assets/javascript/logic.js"></script>
+      <section id="projects">
+        <div id="projects-main">
+          <h2>Projects</h2>
+          <div class="cards container">
+            <div class="row">
+              <div class="col-xl-6">
+                <div class="project card">
+                  <div class="card-header"><h3>Expense</h3></div>
+                  <div class="card-body">
+                    <img src="assets/images/expense.png" alt="Expense screenshot" />
+                  </div>
+                  <div class="card-body">
+                    A finance tracker built with Vue.js. The user must create an account. After creating their account and with every login they are routed to their dashboard where they can view and update their expenses and budgets.
+                    The dashboard consists of 4 elements: Receipt Que, Budgets, Transactions, and Upcoming bills.
+                    The user will keep the dashboard information up to date by manually adding in all of their new expenses. 
+                  </div>
+                  <div class="card-body">
+                    <h6>My Role</h6>
+                    Part of a four person team. I was responsible for user authentication with Passport.js, most of the API routes, deployment to Heroku with JawsDB, and Express server configuration. I also wrote most of the controller functions on the back end and a couple of the forms on the front end. 
+                  </div>
+                  <div class="card-body">
+                    <h6>Technologies Used</h6>
+                    <div class="row">
+                      <div class="col-6">
+                        <label>Front End</label>
+                        <ul>
+                          <li><a href="https://vuejs.org/" target="_blank">
+                            Vue.js</a></li>
+                          <li><a href="https://getbootstrap.com/" target="_blank">
+                            Bootstrap</a></li>
+                          <li><a href="https://jquery.com/" target="_blank">
+                            jQuery</a></li>
+                        </ul>
+                      </div>
+                      <div class="col-6">
+                        <label>Back End</label>
+                        <ul>
+                          <li><a href="http://www.passportjs.org/" target="_blank">
+                            Passport.js</a></li>
+                          <li><a href="https://nodejs.org/en/about/" target="_blank">
+                            Node</a></li>
+                          <li><a href="https://expressjs.com/" target="_blank">
+                            Express</a></li>
+                          <li><a href="https://dev.mysql.com/doc/refman/8.0/en/introduction.html" target="_blank">
+                            MySQL</a></li>
+                          <li><a href="http://docs.sequelizejs.com/" target="_blank">
+                            Sequelize</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                      <a href="https://github.com/djknit/Expense" class="btn btn-secondary" target="_blank">
+                        <span>Repository</span>
+                      </a>
+                      <a href="https://quiet-spire-74175.herokuapp.com/" class="btn btn-secondary" target="_blank">
+                        <span>Deployed<br>Page</span>
+                      </a>
+                      <a href="./assets/documents/expense.html" class="btn btn-secondary" target="_blank">
+                        <span>Readme</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-6">
+                <div class="project">
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div id="contact-main">
+          <h2>Contact Me</h2>
+          <div id="contact_methods">
+            <div class="contact-method">
+              <p class="contact_method_text">Send me an e-mail:<br><a href="mailto:djknit@gmail.com"><img class="contact_image" src="assets/images/email.png" alt="Email symbol" /></a></p>
+            </div>            
+            <div class="contact-method">
+              <p class="contact_method_text">Or visit my</p>
+              <a href="https://www.linkedin.com/in/david-knittel-675a20167/" target="_blank"><img class="contact_image" src="assets/images/linked_in_logo.png" alt="LinkedIn logo" /></a>
+            </div>            
+            <div class="contact-method">
+              <p class="contact_method_text">Or my</p>
+              <a href="https://github.com/djknit/" target="_blank"><img class="contact_image" src="assets/images/github_logo.png" alt="GitHub logo" /></a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Linking my javascript -->
+    <script src="assets/javascript/logic.js"></script>
+  </body>
 </html>

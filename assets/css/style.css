@@ -1,13 +1,19 @@
 body {
-    background-color: #181818;
+    background-color: #202020;
     padding: 0;
     margin: 0;
     min-height: 100vh;
 }
 
+a, a:hover {
+    text-decoration: none;
+}
+
+/* HEADER ----------------------------------------*/
+
 header {
-    height: 50px;
-    background-color: #808080;
+    background-color: #6c757d;
+    border-bottom: solid #555555 1px;
 }
 
 header h2 {
@@ -15,6 +21,13 @@ header h2 {
     margin: 10px 0;
     color: 	#56208a;
     font-size: 28px;
+    font-family: 'PT serif', serif;
+}
+
+header hr {
+    display: none;
+    border-top: solid whitesmoke .5px;
+    margin: 0;
 }
 
 nav {
@@ -24,7 +37,6 @@ nav {
 nav a {
     color: #56208a;
     display: inline-block;
-    text-decoration: none;
     text-align: center;
     padding: 0;
     margin-top: 15px;
@@ -48,12 +60,14 @@ nav a:last-child {
 nav a:hover {
     font-weight: bold;
     color: #56208a;
-    text-decoration: none;
 }
 
+/* ABOUT ----------------------------------------*/
+
 #about {
-    margin-top: 60px;
     position: relative;
+    padding-top: 30px;
+    margin: 30px 0 0;
 }
 
 #profile-pic {
@@ -79,6 +93,8 @@ nav a:hover {
     margin: 0;
     font-size: 30px;
     color: black;
+    font-family: 'PT Serif', serif;
+    font-weight: 700;
 }
 
 #about-basic {
@@ -94,25 +110,21 @@ nav a:hover {
     overflow: hidden;
 }
 
-h2.about {
+h2.about, #projects h2, #contact h2 {
     margin: 0;
     text-align: center;
     color: whitesmoke;
     padding: 15px 0 10px;
-    text-decoration: underline;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 p.about {
     font-size: 16px;
-    color: white;
+    color: whitesmoke;
 }
 
 span.placeholder {
     padding-left: calc(164px - 5px/3 - 50%/9);
-}
-
-span.end-placeholder {
-    padding-right: 104px;
 }
 
 #toggle-about-basic {
@@ -125,25 +137,203 @@ span.end-placeholder {
     z-index: 2;
 }
 
+#toggle-about-basic:hover {
+    background-color: #3878c5;
+}
+
 #toggle-about-basic:focus {
     outline: none;
 }
 
-/* ANIMATIONS */
+/* PROJECTS ----------------------------------------*/
+
+#projects {
+    margin-top: 30px;
+    padding-top: 10px;
+}
+
+#projects-main {
+    background-color: #56208a;
+    margin: 0 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.project.card {
+    background-color: #4f84c4;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #444444;
+    color: black;
+}
+
+.project.card > div {
+    border-color: #444444;
+}
+
+.project h3 {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.project .card-body {
+    text-align: left;
+    border-top: 1px solid #444444;
+}
+
+.card-body:nth-child(2), .card-body:nth-child(3) {
+    border-top: none;
+}
+
+.card-body:nth-child(3) {
+    padding-top: 0;
+}
+
+.project img {
+    width: 100%;
+}
+
+h6 {
+    text-align: center;
+}
+
+.card-body .col-6 {
+    text-align: center;
+}
+
+.card-body ul {
+    list-style-type: none;
+    line-height: 1.7;
+    padding-left: calc(50% - 40px);
+    text-align: left;
+    margin-bottom: 0;
+}
+
+label {
+    margin-bottom: 0;
+    border-bottom: 1px solid black;
+    padding: 0 6px;
+    font-size: 1.05em;
+}
+
+ul li {
+    padding-left: 6px;
+    padding-right: 2px;
+}
+
+ul a {
+    color: black;
+}
+
+ul a:hover {
+    font-weight: 500;
+    color: black;
+}
+
+.card-footer {
+    padding: 0;
+}
+
+.card-footer .btn-group {
+    width: 100%;
+}
+
+.btn-group > .btn {
+    border: 1px solid whitesmoke;
+    border-radius: 0;
+    color: whitesmoke;
+    padding: 0;
+    flex: auto;
+    vertical-align: middle;
+    display: flex;
+}
+
+.btn > span {
+    margin: auto;
+}
+
+.btn-group .btn:first-child {
+    border-bottom-left-radius: 10px;
+}
+
+.btn-group .btn:last-child {
+    border-bottom-right-radius: 10px;
+}
+
+/* CONTACT ----------------------------------------*/
+
+#contact {
+    margin: 30px 0;
+    padding-top: 10px;
+}
+
+#contact-main {
+    min-height: 1000px;
+    background-color: #56208a;
+    border-radius: 10px;
+    margin: 0 20px;
+    padding: 0 20px;
+}
+
+#contact h2 {
+    margin-bottom: 20px;
+}
+
+.contact-method {
+    background-color: #4f84c4;
+    border-radius: 10px;
+    display: inline-block;
+    text-align: center;
+    width: 250px;
+    vertical-align: top;
+    height: 137px;
+    margin: 0 20px 20px 0;
+}
+
+.contact-method:hover {
+    animation: shake 1s 10ms linear infinite;
+}
+
+.contact_method_text {
+    font-size: 26px;
+    text-align: center;
+}
+
+.contact_method_text a {
+    text-decoration: none;
+    font-size: 30px;
+    color: black;
+}
+
+.contact_method_text a:hover {
+    font-size: 34.4px;
+}
+
+.contact_image {
+    height: 34px;
+    width: auto;
+}
+
+.contact_image:hover {
+    height: 39px;
+    width: auto;
+}
+
+/* ANIMATIONS ----------------------------------------*/
 
 /* open/close animation for about section */
 @keyframes open {
-    from {height: 276px;}
-    to {height: 543.4px;}
+    from { height: 252px; }
+    to { height: 520px; }
 }
 
 @keyframes close {
-    from {height: 543.4px;}
-    to {height: 276px;}
+    from { height: 520px; }
+    to { height: 252px; }
 }
 
 /* Flip arrow animation for about open/close button */
-/* --- Source: https://stackoverflow.com/questions/5406368/can-you-use-css-to-mirror-flip-text (user: Duopixel) */
+/* -- Source: https://stackoverflow.com/questions/5406368/can-you-use-css-to-mirror-flip-text (user: Duopixel) */
 @keyframes flip-up {
     from {
         -moz-transform: scale(1, 1);
@@ -194,5 +384,218 @@ span.end-placeholder {
     }
     to {
         opacity: 0;
+    }
+}
+
+/* Contact method hover shake */
+@keyframes shake {
+    0% {
+        transform: rotate(0) translate(0, 0);
+    }
+    25% {
+        transform: rotate(-10deg) translate(0, -10px);
+    }
+    50% {
+        transform: rotate(0) translate(0, 0);
+    }
+    75% {
+        transform: rotate(10deg) translate(0, -10px);
+    }
+    100% {
+        transform: rotate(0)  translate(0, 0);
+    }
+}
+
+/************************************************************/
+/* Breakpoints (match Bootstrap breakpoints) */
+/************************************************************/
+
+/* LARGE (2nd widest) */
+@media screen and (max-width: 1199px) {
+    #about-basic {
+        height: 296px;
+    }
+
+    /* open/close animation for about section */
+    @keyframes open {
+        from { height: 296px; }
+        to { height: 592px; }
+    }
+
+    @keyframes close {
+        from { height: 592px; }
+        to { height: 296px; }
+    }
+
+    div.project {
+        width: 80%;
+        margin-left: 10%;
+    }
+}
+
+/* MEDIUM */
+@media screen and (max-width: 991px) {
+    span.placeholder {
+        display: none;
+    }
+
+    #about-basic {
+        height: 365px;
+    }
+
+    /* open/close animation for about section */
+    @keyframes open {
+        from { height: 365px; }
+        to { height: 758px; }
+    }
+
+    @keyframes close {
+        from { height: 758px; }
+        to { height: 365px; }
+    }
+
+    div.project {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+/* SMALL */
+@media screen and (max-width: 767px) {
+    #profile-pic {
+        top: 0;
+        height: 200px;
+        width: auto;
+        border-radius: 10px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    #about {
+        padding-top: 5px;
+    }
+
+    #about-basic {
+        height: 464px;
+    }
+
+    .card-body:nth-child(2) {
+        padding: 0 0 20px;
+    }
+
+    /* open/close animation for about section */
+    @keyframes open {
+        from { height: 464px; }
+        to { height: 998px; }
+    }
+
+    @keyframes close {
+        from { height: 998px; }
+        to { height: 464px; }
+    }
+}
+
+/* BOOTSTRAP XS */
+@media screen and (max-width: 575px) {
+
+}
+
+/* EXTRA SMALL (a little smaller than Bootstrap's xs) */
+@media screen and (max-width: 551px) {
+    .container {
+        width: 410px;
+    }
+
+    .cards.container {
+        width: 100%;
+    }
+
+    header {
+        text-align: center;
+        padding-bottom: 5px;
+    }
+
+    header hr {
+        display: block;
+    }
+
+    nav {
+        float: none;
+    }
+
+    #profile-pic {
+        position: static;
+        float: left;
+        border-bottom-left-radius: 0;
+        padding-right: 15px;
+    }
+
+    #main-heading {
+        padding-left: 5px;
+    }
+
+    #about {
+        padding-top: 5px;
+    }
+
+    #about-basic {
+        height: 630px;
+    }
+
+    /* open/close animation for about section */
+    @keyframes open {
+        from { height: 630px; }
+        to { height: 1360px; }
+    }
+
+    @keyframes close {
+        from { height: 1360px; }
+        to { height: 630px; }
+    }
+}
+
+/* DOUBLE EXTRA SMALL */
+@media screen and (max-width: 415px) {
+    .container {
+        width: 400px;
+    }
+
+    /* open/close animation for about section */
+    @keyframes open {
+        from { height: 630px; }
+        to { height: 1380px; }
+    }
+
+    @keyframes close {
+        from { height: 1380px; }
+        to { height: 630px; }
+    }
+}
+
+/* SMALLEST */
+@media screen and (max-width: 380px) {
+    .container {
+        width: 350px;
+        padding: 0 10px;
+    }
+
+    #projects {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    #about-basic {
+        height: 726px;
+    }
+
+    /* open/close animation for about section */
+    @keyframes open {
+        from { height: 726px; }
+        to { height: 1550px; }
+    }
+
+    @keyframes close {
+        from { height: 1550px; }
+        to { height: 726px; }
     }
 }
