@@ -191,6 +191,7 @@ span.placeholder {
 
 .project img {
     width: 100%;
+    border: 1px solid #444444;
 }
 
 h6 {
@@ -207,6 +208,10 @@ h6 {
     padding-left: calc(50% - 40px);
     text-align: left;
     margin-bottom: 0;
+}
+
+.card-body > ul {
+    padding-left: calc(50% - 73px);
 }
 
 label {
@@ -243,7 +248,7 @@ ul a:hover {
     border-radius: 0;
     color: whitesmoke;
     padding: 0;
-    flex: auto;
+    flex: 1 1 0;
     vertical-align: middle;
     display: flex;
 }
@@ -268,11 +273,11 @@ ul a:hover {
 }
 
 #contact-main {
-    min-height: 1000px;
     background-color: #56208a;
     border-radius: 10px;
-    margin: 0 20px;
-    padding: 0 20px;
+    margin: 0 20px 20px;
+    padding: 0 20px 20px;
+    text-align: center;
 }
 
 #contact h2 {
@@ -291,32 +296,32 @@ ul a:hover {
 }
 
 .contact-method:hover {
-    animation: shake 1s 10ms linear infinite;
+    animation: shake 1s infinite;
 }
 
-.contact_method_text {
+.contact-method p {
     font-size: 26px;
     text-align: center;
-}
-
-.contact_method_text a {
-    text-decoration: none;
-    font-size: 30px;
     color: black;
 }
 
-.contact_method_text a:hover {
-    font-size: 34.4px;
-}
-
-.contact_image {
+.contact-method img {
     height: 34px;
     width: auto;
 }
 
-.contact_image:hover {
-    height: 39px;
-    width: auto;
+.contact-method span {
+    color: black;
+    font-weight: bold;
+    font-size: 26px;
+}
+
+.contact-method img.heartbeat {
+    animation: heartbeat 500ms infinite;
+}
+
+.contact-method span.heartbeat {
+    animation: text-heartbeat 500ms infinite;
 }
 
 /* ANIMATIONS ----------------------------------------*/
@@ -393,16 +398,45 @@ ul a:hover {
         transform: rotate(0) translate(0, 0);
     }
     25% {
-        transform: rotate(-10deg) translate(0, -10px);
+        transform: rotate(-10deg) translate(0, -20px);
     }
     50% {
         transform: rotate(0) translate(0, 0);
     }
     75% {
-        transform: rotate(10deg) translate(0, -10px);
+        transform: rotate(10deg) translate(0, -20px);
     }
     100% {
         transform: rotate(0)  translate(0, 0);
+    }
+}
+
+/* Contact method image hover heartbeat effect */
+@keyframes heartbeat {
+    0% {
+        height: 34px;
+        width: auto;
+    }
+    50% {
+        height: 39px;
+        width: auto;
+    }
+    100% {
+        height: 34px;
+        width: auto;
+    }
+}
+
+/* Contact method image hover heartbeat effect */
+@keyframes text-heartbeat {
+    0% {
+        font-size: 26px;
+    }
+    50% {
+        font-size: 29px;
+    }
+    100% {
+        font-size: 26px;
     }
 }
 
@@ -480,7 +514,16 @@ ul a:hover {
     }
 
     .card-body:nth-child(2) {
-        padding: 0 0 20px;
+        padding: 0;
+    }
+
+    .card-body:nth-child(3) {
+        padding-top: 20px;
+        border-top: 1px solid #444444;
+    }
+
+    .card-body > img {
+        border: none;
     }
 
     /* open/close animation for about section */

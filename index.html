@@ -158,7 +158,7 @@
                     </div>
                   </div>
                   <div class="card-footer">
-                    <div class="btn-group" role="group" aria-label="Basic example">
+                    <div class="btn-group" role="group" aria-label="links">
                       <a href="https://github.com/djknit/Expense" class="btn btn-secondary" target="_blank">
                         <span>Repository</span>
                       </a>
@@ -173,8 +173,196 @@
                 </div>
               </div>
               <div class="col-xl-6">
-                <div class="project">
-                  
+                <div class="project card">
+                  <div class="card-header"><h3>Eat-da-Burger</h3></div>
+                  <div class="card-body">
+                    <img src="assets/images/burger.png" alt="Eat-da-Burger screenshot" />
+                  </div>
+                  <div class="card-body">
+                    Eat-da-Burger is a simple looking application with a little more going on behind the scenes. This is the first complete
+                    app that I built using the model-view-controller file structure. The user may enter the name of a burger they would
+                    like to eat. The burger appears on the left side of the page with a button labeled "Devour!" The user may add as many
+                    burgers as they would like. When the "Devour!" button is pressed, the burger moves to the right side of the page to
+                    show that it has been devoured. All data is stored in a MySQL database. This app uses three of the four CRUD methods
+                    (create, read, and update).
+                  </div>
+                  <div class="card-body">
+                    <h6>My Role</h6>
+                      Sole developer.
+                  </div>
+                  <div class="card-body">
+                    <h6>Technologies Used</h6>
+                    <div class="row">
+                      <div class="col-6">
+                        <label>Front End</label>
+                        <ul>
+                          <li><a href="https://handlebarsjs.com/" target="_blank">
+                            Handlebars</a></li>
+                          <li><a href="https://jquery.com/" target="_blank">
+                            jQuery</a></li>
+                        </ul>
+                      </div>
+                      <div class="col-6">
+                        <label>Back End</label>
+                        <ul>
+                          <li><a href="https://nodejs.org/en/about/" target="_blank">
+                            Node</a></li>
+                          <li><a href="https://expressjs.com/" target="_blank">
+                            Express</a></li>
+                          <li><a href="https://dev.mysql.com/doc/refman/8.0/en/introduction.html" target="_blank">
+                            MySQL</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <div class="btn-group" role="group" aria-label="links">
+                      <a href="https://github.com/djknit/burger" class="btn btn-secondary" target="_blank">
+                        <span>Repository</span>
+                      </a>
+                      <a href="https://devourdaburger.herokuapp.com/" class="btn btn-secondary" target="_blank">
+                        <span>Deployed<br>Page</span>
+                      </a>
+                      <a href="./assets/documents/burger.html" class="btn btn-secondary" target="_blank">
+                        <span>Readme</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-6">
+                <div class="project card">
+                  <div class="card-header"><h3>Friend Finder</h3></div>
+                  <div class="card-body">
+                    <img src="assets/images/friend_finder.png" alt="Friend Finder screenshot" />
+                  </div>
+                  <div class="card-body">
+                    Friend Finder is a survey based matchmaker app powered by an Express server. The input form accepts the user's name, a link to a picture, and their answers to 10 survey questions (with answers being agree/disagree on a scale of 1-5). The input is validated on the front end to ensure that all the questions were answered before being posted to the server with jQuery's Ajax method. On the server side, the new user's answers are compared to the answers of all existing users to find the existing user(s) whose answers most closely match the new user's answers. The new user is added to the users array and their match is returned by the server. The front end then display's the match.
+                  </div>
+                  <div class="card-body">
+                    <h6>My Role</h6>
+                    Sole developer.
+                  </div>
+                  <div class="card-body">
+                    <h6>Technologies Used</h6>
+                    <div class="row">
+                      <div class="col-6">
+                        <label>Front End</label>
+                        <ul>
+                          <li><a href="https://getbootstrap.com/" target="_blank">
+                            Bootstrap</a></li>
+                          <li><a href="https://jquery.com/" target="_blank">
+                            jQuery</a></li>
+                        </ul>
+                      </div>
+                      <div class="col-6">
+                        <label>Back End</label>
+                        <ul>
+                          <li><a href="https://nodejs.org/en/about/" target="_blank">
+                            Node</a></li>
+                          <li><a href="https://expressjs.com/" target="_blank">
+                            Express</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <div class="btn-group" role="group" aria-label="links">
+                      <a href="https://github.com/djknit/Friend-Finder" class="btn btn-secondary" target="_blank">
+                        <span>Repository</span>
+                      </a>
+                      <a href="https://people-matcher.herokuapp.com/" class="btn btn-secondary" target="_blank">
+                        <span>Deployed<br>Page</span>
+                      </a>
+                      <a href="./assets/documents/friend-finder.html" class="btn btn-secondary" target="_blank">
+                        <span>Readme</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-6">
+                <div class="project card">
+                  <div class="card-header"><h3>LIRI</h3></div>
+                  <div class="card-body">
+                    <img src="assets/images/liri.png" alt="LIRI screenshot" />
+                  </div>
+                  <div class="card-body">
+                    LIRI, the Language Interpretation and Recognition Interface, is a command-line-interface (CLI) app built with Node.js.
+                    LIRI accepts four commands. The "concert-this" command searches the Bandsintown API for upcoming performances by the
+                    artist provided by the user. The "spotify-this-song" command queries the Spotify API for information about the
+                    user-specified song. The "movie-this" command searches the OMDB API for information about the user-specified movie.
+                    Results are printed in the console and also recorded in a '.txt' file.
+                  </div>
+                  <div class="card-body">
+                    <h6>My Role</h6>
+                    Sole developer.
+                  </div>
+                  <div class="card-body">
+                    <h6>Technologies Used</h6>
+                    <ul>
+                      <li><a href="https://nodejs.org/en/about/" target="_blank">
+                        Node</a></li>
+                      <li><a href="https://www.npmjs.com/package/request" target="_blank">
+                        Request (Node package)</a></li>
+                      <li><a href="http://momentjs.com/" target="_blank">
+                        Moment (as a Node package)</a></li>
+                      <li><a href="https://www.npmjs.com/package/dotenv" target="_blank">
+                        Dotenv (Node package)</a></li>
+                    </ul>
+                  </div>
+                  <div class="card-footer">
+                    <div class="btn-group" role="group" aria-label="links">
+                      <a href="https://github.com/djknit/liri-node-app" class="btn btn-secondary" target="_blank">
+                        <span>Repository</span>
+                      </a>
+                      <a href="https://www.youtube.com/watch?v=GGi05Dj_tzY" class="btn btn-secondary" target="_blank">
+                        <span>Demo<br>Video</span>
+                      </a>
+                      <a href="./assets/documents/liri.html" class="btn btn-secondary" target="_blank">
+                        <span>Readme</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-6">
+                <div class="project card">
+                  <div class="card-header"><h3>Food Fight RPG</h3></div>
+                  <div class="card-body">
+                    <img src="assets/images/rpg.png" alt="Food Fight screenshot" />
+                  </div>
+                  <div class="card-body">
+                    Food Fight is an RPG game written with HTML, CSS, and Javascript. The jQuery Javascript library is used for DOM
+                    interaction. The player begins the game by selecting a character to play as. They must then battle their enemies one at
+                    a time. The player wins when they have defeated all the enemies and loses if their character is defeated. The player's
+                    character deals more damage with each attack, but the opponents' counter attack scores are not increased. The game can
+                    be both won and lost when playing as any given character.
+                  </div>
+                  <div class="card-body">
+                    <h6>My Role</h6>
+                    Sole developer.
+                  </div>
+                  <div class="card-body">
+                    <h6>Technologies Used</h6>
+                    <ul>
+                      <li><a href="https://jquery.com/" target="_blank">
+                        jQuery</a></li>
+                    </ul>
+                  </div>
+                  <div class="card-footer">
+                    <div class="btn-group" role="group" aria-label="links">
+                      <a href="https://github.com/djknit/Food-Fight" class="btn btn-secondary" target="_blank">
+                        <span>Repository</span>
+                      </a>
+                      <a href="https://djknit.github.io/Food-Fight" class="btn btn-secondary" target="_blank">
+                        <span>Deployed<br>App</span>
+                      </a>
+                      <a href="./assets/documents/rpg.html" class="btn btn-secondary" target="_blank">
+                        <span>Readme</span>
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -186,17 +374,22 @@
         <div id="contact-main">
           <h2>Contact Me</h2>
           <div id="contact_methods">
-            <div class="contact-method">
-              <p class="contact_method_text">Send me an e-mail:<br><a href="mailto:djknit@gmail.com"><img class="contact_image" src="assets/images/email.png" alt="Email symbol" /></a></p>
-            </div>            
-            <div class="contact-method">
-              <p class="contact_method_text">Or visit my</p>
-              <a href="https://www.linkedin.com/in/david-knittel-675a20167/" target="_blank"><img class="contact_image" src="assets/images/linked_in_logo.png" alt="LinkedIn logo" /></a>
-            </div>            
-            <div class="contact-method">
-              <p class="contact_method_text">Or my</p>
-              <a href="https://github.com/djknit/" target="_blank"><img class="contact_image" src="assets/images/github_logo.png" alt="GitHub logo" /></a>
-            </div>
+            <a href="mailto:djknit@gmail.com" class="contact-method">
+              <p>Send me an e-mail:</p>
+              <img src="assets/images/email.png" alt="Email symbol" />
+            </a>
+            <a href="https://www.linkedin.com/in/david-knittel-675a20167/" class="contact-method" target="_blank">
+              <p>Or visit my</p>
+              <img src="assets/images/linked_in_logo.png" alt="LinkedIn logo" />
+            </a>
+            <a href="https://github.com/djknit/" class="contact-method" target="_blank">
+              <p>Or my</p>
+              <img src="assets/images/github_logo.png" alt="GitHub logo" />
+            </a>
+            <a href="tel:+1-785-410-5644" class="contact-method">
+              <p>Call or text</p>
+              <span>(785) 410-5644</span>
+            </a>
           </div>
         </div>
       </section>

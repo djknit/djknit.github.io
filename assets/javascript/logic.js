@@ -1,3 +1,4 @@
+// open/close about section
 $("#toggle-about-basic").on("click", function() {
   console.log("click")
   if ($(this).attr("state") === "open") {
@@ -21,3 +22,13 @@ $("#toggle-about-basic").on("click", function() {
     }, 1000);
   }
 });
+
+// contact method hover logo heartbeat effect
+$(".contact-method").hover(
+  function() {
+    $(this).children("img, span").addClass("heartbeat");
+  },
+  function() {
+    $(this).children("img, span").removeClass("heartbeat");
+  }
+);
