@@ -198,6 +198,11 @@ h6 {
     text-align: center;
 }
 
+.card-body > a {
+    color: black;
+    text-decoration: underline;
+}
+
 .card-body .col-6 {
     text-align: center;
 }
