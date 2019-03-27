@@ -95,7 +95,7 @@ nav a:hover {
     padding: 10px 5px 10px 189px;
     margin: 0;
     font-size: 30px;
-    color: black;
+    color: #101010;
     font-family: 'PT Serif', serif;
     font-weight: 700;
 }
@@ -176,22 +176,23 @@ span.placeholder {
     font-family: 'Times New Roman', Times, serif;
 }
 
-.project.card {
+.project {
     background-color: #fafafa;
     border-radius: 10px;
     margin-bottom: 15px;
     border: 2px solid #444444;
-    color: black;
+    color: #202020;
     box-shadow: 2px 4px 2px #525252;
 }
 
-.project.card > div {
+.project > div {
     border-color: #444444;
 }
 
 .project h3 {
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
+    color: #050505;
 }
 
 .project .card-body {
@@ -212,13 +213,17 @@ span.placeholder {
     border: 1px solid #444444;
 }
 
-h6 {
+.project h6 {
     text-align: center;
+    color: #101010
 }
 
 .card-body > a {
+    color: #606060;
+}
+
+.card-body > a:hover {
     color: black;
-    text-decoration: underline;
 }
 
 .card-body .col-6 {
@@ -237,7 +242,8 @@ h6 {
     padding-left: calc(50% - 73px);
 }
 
-label {
+.card-body label {
+    color: #101010;
     margin-bottom: 0;
     border-bottom: 1px solid black;
     padding: 0 6px;
@@ -250,12 +256,12 @@ ul li {
 }
 
 ul a {
-    color: black;
+    color: #202020;
 }
 
 ul a:hover {
     font-weight: 500;
-    color: black;
+    color: #202020;
 }
 
 .card-footer {
@@ -267,13 +273,19 @@ ul a:hover {
 }
 
 .btn-group > .btn {
-    border: 1px solid whitesmoke;
+    border: 2px solid #aaaaaa;
     border-radius: 0;
-    color: whitesmoke;
+    color: white;
     padding: 0;
     flex: 1 1 0;
     vertical-align: middle;
     display: flex;
+    box-shadow: 1.5px 3px 1.5px #525252;
+}
+
+.btn-group > .btn:focus {
+    border: 2px solid #6c757d;
+    box-shadow: none;
 }
 
 .btn > span {
