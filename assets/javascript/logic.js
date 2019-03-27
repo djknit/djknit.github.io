@@ -32,3 +32,7 @@ $(".contact-method").hover(
     $(this).children("img, span").removeClass("heartbeat");
   }
 );
+
+$("a").on('click', function() {
+  setTimeout(() => $(this).blur(), 700);
+});

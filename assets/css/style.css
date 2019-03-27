@@ -1,5 +1,5 @@
 body {
-    background-color: #202020;
+    background-color: #6c757d;
     padding: 0;
     margin: 0;
     min-height: 100vh;
@@ -12,8 +12,9 @@ a, a:hover {
 /* HEADER ----------------------------------------*/
 
 header {
-    background-color: #6c757d;
+    background-color: #eaeaea;
     border-bottom: solid #555555 1px;
+    box-shadow: 0px 4px 3px #525252;
 }
 
 header h2 {
@@ -41,7 +42,7 @@ nav a {
     padding: 0;
     margin-top: 15px;
     width: 98.6px;
-    border-right: solid #cccccc .2px;
+    border-right: solid white .2px;
     font-size: 17px;
     font-family: "Arial", "Helvetica Neue", Helvetica, sans-serif;
 }
@@ -78,14 +79,16 @@ nav a:hover {
     top: -25px;
     border: 1px solid #4f84c4;
     border-radius: 20px;
+    box-shadow: 3px 6px 3px #525252;
 }
 
 #about-header {
     display: inline-block;
-    background-color: #4f84c4;
+    background-color: #eeeeee;
     width: 100%;
     position: relative;
     border-radius: 10px;
+    box-shadow: 2px 4px 3px #525252;
 }
 
 #main-heading {
@@ -101,26 +104,27 @@ nav a:hover {
     height: 252px;
     width: 90%;
     margin-left: 5%;
-    background-color: #56208a;
+    background-color: #efefef;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     position: relative;
     z-index: -1;
     padding: 0 15px;
     overflow: hidden;
+    box-shadow: 3px 6px 3px #525252;
 }
 
-h2.about, #projects h2, #contact h2 {
+h2.about {
     margin: 0;
     text-align: center;
-    color: whitesmoke;
+    color: #101010;
     padding: 15px 0 10px;
     font-family: 'Times New Roman', Times, serif;
 }
 
 p.about {
     font-size: 16px;
-    color: whitesmoke;
+    color: #202020;
 }
 
 span.placeholder {
@@ -133,12 +137,14 @@ span.placeholder {
     right: calc(5% - 4px);
     padding: 5px 10px;
     border-radius: 10px;
-    background-color: #4f84c4;
+    background-color: rgb(99, 200, 382);
     z-index: 2;
+    box-shadow: 3px 6px 3px #525252;
+    cursor: pointer;
 }
 
 #toggle-about-basic:hover {
-    background-color: #3878c5;
+    background-color: rgb(89.1, 180, 344);
 }
 
 #toggle-about-basic:focus {
@@ -153,18 +159,30 @@ span.placeholder {
 }
 
 #projects-main {
-    background-color: #56208a;
+    background-color: #e0e0e0;
     margin: 0 20px;
     border-radius: 10px;
+    color: white;
     text-align: center;
+    box-shadow: 3px 6px 3px #525252;
+}
+
+#projects h2, #contact h2 {
+    margin: 0;
+    text-align: center;
+    font-size: 36px;
+    color: black;
+    padding: 15px 0 10px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .project.card {
-    background-color: #4f84c4;
+    background-color: #fafafa;
     border-radius: 10px;
     margin-bottom: 15px;
     border: 2px solid #444444;
     color: black;
+    box-shadow: 2px 4px 2px #525252;
 }
 
 .project.card > div {
@@ -278,7 +296,7 @@ ul a:hover {
 }
 
 #contact-main {
-    background-color: #56208a;
+    background-color: #e0e0e0;
     border-radius: 10px;
     margin: 0 20px 20px;
     padding: 0 20px 20px;
@@ -290,7 +308,7 @@ ul a:hover {
 }
 
 .contact-method {
-    background-color: #4f84c4;
+    background-color: rgb(99, 200, 382);
     border-radius: 10px;
     display: inline-block;
     text-align: center;
@@ -298,10 +316,15 @@ ul a:hover {
     vertical-align: top;
     height: 137px;
     margin: 0 20px 20px 0;
+    box-shadow: 3px 6px 3px #525252;
 }
 
 .contact-method:hover {
     animation: shake 1s infinite;
+}
+
+.contact-method:focus {
+    box-shadow: .5px 1px .5px #525252;
 }
 
 .contact-method p {
@@ -575,7 +598,7 @@ ul a:hover {
         position: static;
         float: left;
         border-bottom-left-radius: 0;
-        padding-right: 15px;
+        margin-right: 15px;
     }
 
     #main-heading {
