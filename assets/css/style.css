@@ -369,11 +369,11 @@ ul a:hover {
 /* open/close animation for about section */
 @keyframes open {
     from { height: 252px; }
-    to { height: 520px; }
+    to { height: 360px; }
 }
 
 @keyframes close {
-    from { height: 520px; }
+    from { height: 360px; }
     to { height: 252px; }
 }
 
@@ -493,11 +493,11 @@ ul a:hover {
     /* open/close animation for about section */
     @keyframes open {
         from { height: 296px; }
-        to { height: 592px; }
+        to { height: 435px; }
     }
 
     @keyframes close {
-        from { height: 592px; }
+        from { height: 435px; }
         to { height: 296px; }
     }
 
@@ -520,11 +520,11 @@ ul a:hover {
     /* open/close animation for about section */
     @keyframes open {
         from { height: 365px; }
-        to { height: 758px; }
+        to { height: 554px; }
     }
 
     @keyframes close {
-        from { height: 758px; }
+        from { height: 554px; }
         to { height: 365px; }
     }
 
@@ -569,11 +569,11 @@ ul a:hover {
     /* open/close animation for about section */
     @keyframes open {
         from { height: 464px; }
-        to { height: 998px; }
+        to { height: 720px; }
     }
 
     @keyframes close {
-        from { height: 998px; }
+        from { height: 720px; }
         to { height: 464px; }
     }
 }
@@ -628,11 +628,11 @@ ul a:hover {
     /* open/close animation for about section */
     @keyframes open {
         from { height: 630px; }
-        to { height: 1360px; }
+        to { height: 962px; }
     }
 
     @keyframes close {
-        from { height: 1360px; }
+        from { height: 962px; }
         to { height: 630px; }
     }
 }
@@ -646,11 +646,11 @@ ul a:hover {
     /* open/close animation for about section */
     @keyframes open {
         from { height: 630px; }
-        to { height: 1380px; }
+        to { height: 979px; }
     }
 
     @keyframes close {
-        from { height: 1380px; }
+        from { height: 979px; }
         to { height: 630px; }
     }
 }
@@ -674,11 +674,11 @@ ul a:hover {
     /* open/close animation for about section */
     @keyframes open {
         from { height: 726px; }
-        to { height: 1550px; }
+        to { height: 1103px; }
     }
 
     @keyframes close {
-        from { height: 1550px; }
+        from { height: 1103px; }
         to { height: 726px; }
     }
 }
