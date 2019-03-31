@@ -534,8 +534,23 @@ ul a:hover {
     }
 }
 
+@media screen and (max-width: 768px) {
+    header {
+        text-align: center;
+        padding-bottom: 5px;
+    }
+
+    header hr {
+        display: block;
+    }
+    
+    nav {
+        float: none;
+    }
+}
+
 /* SMALL */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767px) {    
     #profile-pic {
         top: 0;
         height: 200px;
@@ -543,6 +558,7 @@ ul a:hover {
         border-radius: 10px;
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
+        box-shadow: none;
     }
 
     #about {
@@ -655,11 +671,11 @@ ul a:hover {
     }
 }
 
-/* SMALLEST */
+/* SMALLEST (almost) */
 @media screen and (max-width: 380px) {
     .container {
-        width: 350px;
-        padding: 0 10px;
+        width: 330px;
+        padding: 0;
     }
 
     #projects {
@@ -680,5 +696,16 @@ ul a:hover {
     @keyframes close {
         from { height: 1103px; }
         to { height: 726px; }
+    }
+}
+
+@media screen and (max-width: 348px) {
+    #about-header {
+        width: calc(100vw - 10px);
+    }
+    
+    #about-basic {
+        margin-left: auto;
+        margin-right: auto;
     }
 }
