@@ -329,6 +329,7 @@ ul a:hover {
     height: 137px;
     margin: 0 20px 20px 0;
     box-shadow: 3px 6px 3px #525252;
+    position: relative;
 }
 
 .contact-method:hover {
@@ -343,6 +344,12 @@ ul a:hover {
     font-size: 26px;
     text-align: center;
     color: black;
+}
+.contact-method p:last-child {
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 .contact-method img {
