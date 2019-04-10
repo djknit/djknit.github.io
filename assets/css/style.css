@@ -233,13 +233,17 @@ span.placeholder {
 .card-body ul {
     list-style-type: none;
     line-height: 1.7;
-    padding-left: calc(50% - 40px);
+    padding-left: calc(50% - 39px);
     text-align: left;
     margin-bottom: 0;
 }
 
-.card-body > ul {
-    padding-left: calc(50% - 73px);
+.card-body .col-6:first-child ul {
+    padding-left: calc(50% - 42px);
+}
+
+.card-body .col-6:first-child ul.apis {
+    padding-left: calc(50% - 47px);
 }
 
 .card-body label {

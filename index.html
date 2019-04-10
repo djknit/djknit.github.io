@@ -44,7 +44,9 @@
           <a href="#about">About</a>
           <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
-          <a href="./assets/documents/Resume-David-Knittel.pdf" target="_blank">Resume</a>
+          <a href="./assets/documents/Resume-David-Knittel.pdf" target="_blank" rel="noopener noreferrer">
+            <span>Resume</span>
+          </a>
         </nav>
       </div>
     </header>
@@ -103,6 +105,80 @@
             <div class="row">
               <div class="col-xl-6">
                 <div class="project card">
+                  <div class="card-header"><h3>Book Search</h3></div>
+                  <div class="card-body">
+                    <img src="assets/images/book_search.png" alt="Book Search screenshot" />
+                  </div>
+                  <div class="card-body">
+                    This app uses the Google Books API to allow users to search for books. Information and links for the books are displayed together. Users may save books to the database so that the information can be seen later. They can be saved to the public list which is shared among all users or to a personal list which is visible only to one user. In order to use the personal list, users must create an account. Authentication is managed using Passport.js.
+                  </div>
+                  <div class="card-body">
+                    <h6>My Role</h6>
+                    Sole Developer
+                  </div>
+                  <div class="card-body">
+                    <h6>Technologies Used</h6>
+                    <div class="row">
+                      <div class="col-6">
+                        <label>Front End</label>
+                        <ul>
+                          <li><a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer">
+                            React</a></li>
+                          <li><a href="https://bulma.io/" target="_blank" rel="noopener noreferrer">
+                            Bulma</a></li>
+                          <li><a href="https://nodejs.org/en/about/" target="_blank" rel="noopener noreferrer">
+                            Node</a></li>
+                          <li><a href="https://www.npmjs.com/package/axios/" target="_blank" rel="noopener noreferrer">
+                            Axios</a></li>
+                          <li><a href="http://momentjs.com/" target="_blank" rel="noopener noreferrer">
+                            Moment</a></li>
+                        </ul>
+                      </div>
+                      <div class="col-6">
+                        <label>Back End</label>
+                        <ul>
+                          <li><a href="http://www.passportjs.org/" target="_blank" rel="noopener noreferrer">
+                            Passport</a></li>
+                          <li><a href="https://nodejs.org/en/about/" target="_blank" rel="noopener noreferrer">
+                            Node</a></li>
+                          <li><a href="https://expressjs.com/" target="_blank" rel="noopener noreferrer">
+                            Express</a></li>
+                          <li><a href="https://www.mongodb.com/what-is-mongodb/" target="_blank" rel="noopener noreferrer">
+                            MongoDB</a></li>
+                          <li><a href="https://mongoosejs.com/" target="_blank" rel="noopener noreferrer">
+                            Mongoose</a></li>
+                          <li><a href="https://www.npmjs.com/package/axios/" target="_blank" rel="noopener noreferrer">
+                            Axios</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-6">
+                        <label>Public APIs</label>
+                        <ul class="apis">
+                          <li><a href="https://developers.google.com/books/" target="_blank" rel="noopener noreferrer">
+                            Google Books API</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <div class="btn-group" role="group" aria-label="links">
+                      <a href="https://github.com/djknit/google-books-search/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+                        <span>Repository</span>
+                      </a>
+                      <a href="https://daves-book-search.herokuapp.com/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+                        <span>Deployed<br>Page</span>
+                      </a>
+                      <a href="./assets/documents/book-search.html" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+                        <span>Readme</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-6">
+                <div class="project card">
                   <div class="card-header"><h3>Cerebellum</h3></div>
                   <div class="card-body">
                     <img src="assets/images/cerebellum.png" alt="Cerebellum screenshot" />
@@ -112,7 +188,7 @@
                   </div>
                   <div class="card-body">
                     <h6>My Role</h6>
-                    Part of a four person team. I was responsible for user authentication with Passport.js, Express server setup, MongoDB setup, database controllers, API routes, and mobile responsiveness. 
+                    Part of a four person team. I was responsible for user authentication with Passport, Express.js server setup, MongoDB setup, database controllers, API routes, and mobile responsiveness. 
                   </div>
                   <div class="card-body">
                     <h6>Technologies Used</h6>
@@ -120,51 +196,62 @@
                       <div class="col-6">
                         <label>Front End</label>
                         <ul>
-                          <li><a href="https://vuejs.org/" target="_blank">
+                          <li><a href="https://vuejs.org/" target="_blank" rel="noopener noreferrer">
                             Vue</a></li>
-                          <li><a href="https://getbootstrap.com/" target="_blank">
+                          <li><a href="https://getbootstrap.com/" target="_blank" rel="noopener noreferrer">
                             Bootstrap</a></li>
-                          <li><a href="https://nodejs.org/en/about/" target="_blank">
+                          <li><a href="https://nodejs.org/en/about/" target="_blank" rel="noopener noreferrer">
                             Node</a></li>
-                          <li><a href="https://www.npmjs.com/package/axios/" target="_blank">
+                          <li><a href="https://www.npmjs.com/package/axios/" target="_blank" rel="noopener noreferrer">
                             Axios</a></li>
-                          <li><a href="https://baianat.github.io/vee-validate/" target="_blank">
+                          <li><a href="https://baianat.github.io/vee-validate/" target="_blank" rel="noopener noreferrer">
                             VeeValidate</a></li>
-                          <li><a href="https://zhanziyang.github.io/vue-croppa/#/" target="_blank">
+                          <li><a href="https://zhanziyang.github.io/vue-croppa/#/" target="_blank" rel="noopener noreferrer">
                             Vue Croppa</a></li>
-                            
-                          </ul>
+                        </ul>
                       </div>
                       <div class="col-6">
                         <label>Back End</label>
                         <ul>
-                          <li><a href="http://www.passportjs.org/" target="_blank">
-                            Passport.js</a></li>
-                          <li><a href="https://nodejs.org/en/about/" target="_blank">
+                          <li><a href="http://www.passportjs.org/" target="_blank" rel="noopener noreferrer">
+                            Passport</a></li>
+                          <li><a href="https://nodejs.org/en/about/" target="_blank" rel="noopener noreferrer">
                             Node</a></li>
-                          <li><a href="https://expressjs.com/" target="_blank">
+                          <li><a href="https://expressjs.com/" target="_blank" rel="noopener noreferrer">
                             Express</a></li>
-                          <li><a href="https://www.mongodb.com/what-is-mongodb/" target="_blank">
+                          <li><a href="https://www.mongodb.com/what-is-mongodb/" target="_blank" rel="noopener noreferrer">
                             MongoDB</a></li>
-                          <li><a href="https://mongoosejs.com/" target="_blank">
+                          <li><a href="https://mongoosejs.com/" target="_blank" rel="noopener noreferrer">
                             Mongoose</a></li>
-                          <li><a href="https://www.npmjs.com/package/axios/" target="_blank">
+                          <li><a href="https://www.npmjs.com/package/axios/" target="_blank" rel="noopener noreferrer">
                             Axios</a></li>
-                          <li><a href="https://nodemailer.com/about/" target="_blank">
+                          <li><a href="https://nodemailer.com/about/" target="_blank" rel="noopener noreferrer">
                             Nodemailer</a></li>
                         </ul>
                       </div>
                     </div>
+                    <div class="row">
+                      <div class="col-6">
+                        <label>Public APIs</label>
+                        <ul class="apis">
+                          <li><a href="https://www.meetup.com/meetup_api/" target="_blank" rel="noopener noreferrer">
+                            Meetup API</a></li>
+                          <li><a href="https://www.linkpreview.net/" target="_blank" rel="noopener noreferrer">
+                            LinkPreview API</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    
                   </div>
                   <div class="card-footer">
                     <div class="btn-group" role="group" aria-label="links">
-                      <a href="https://github.com/huntertrammell/Dev-Social-Network/" class="btn btn-secondary" target="_blank">
+                      <a href="https://github.com/huntertrammell/Dev-Social-Network/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
                         <span>Repository</span>
                       </a>
-                      <a href="https://cerebellum-network.herokuapp.com/" class="btn btn-secondary" target="_blank">
+                      <a href="https://cerebellum-network.herokuapp.com/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
                         <span>Deployed<br>Page</span>
                       </a>
-                      <a href="./assets/documents/cerebellum.html" class="btn btn-secondary" target="_blank">
+                      <a href="./assets/documents/cerebellum.html" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
                         <span>Readme</span>
                       </a>
                     </div>
@@ -239,7 +326,7 @@
                     <img src="assets/images/news_scraper.png" alt="News Scraper screenshot" />
                   </div>
                   <div class="card-body">
-                    When the user presses the scrape button, the app scrapes the <a href="https://www.npr.org/sections/news/" target="_blank">NPR news site</a> for article headlines, pictures, links, and summaries. If there are already articles in the database, the new article headlines are compared against the ones in the database to prevent duplicates and up to 8 new articles are saved in the database. The article information is displayed along with a link to the article and a comment section. The comment section is contained in a modal. The comments for the chosen article are retrieved from the database when the modal is opened.
+                    When the user presses the scrape button, the app scrapes the <a href="https://www.npr.org/sections/news/" target="_blank" rel="noopener noreferrer">NPR news site</a> for article headlines, pictures, links, and summaries. If there are already articles in the database, the new article headlines are compared against the ones in the database to prevent duplicates and up to 8 new articles are saved in the database. The article information is displayed along with a link to the article and a comment section. The comment section is contained in a modal. The comments for the chosen article are retrieved from the database when the modal is opened.
                   </div>
                   <div class="card-body">
                     <h6>My Role</h6>
@@ -251,28 +338,28 @@
                       <div class="col-6">
                         <label>Front End</label>
                         <ul>
-                          <li><a href="https://handlebarsjs.com/" target="_blank">
+                          <li><a href="https://handlebarsjs.com/" target="_blank" rel="noopener noreferrer">
                             Handlebars</a></li>
-                          <li><a href="https://getbootstrap.com/" target="_blank">
+                          <li><a href="https://getbootstrap.com/" target="_blank" rel="noopener noreferrer">
                             Bootstrap</a></li>
-                          <li><a href="https://jquery.com/" target="_blank">
+                          <li><a href="https://jquery.com/" target="_blank" rel="noopener noreferrer">
                             jQuery</a></li>
                         </ul>
                       </div>
                       <div class="col-6">
                         <label>Back End</label>
                         <ul>
-                          <li><a href="https://nodejs.org/en/about/" target="_blank">
+                          <li><a href="https://nodejs.org/en/about/" target="_blank" rel="noopener noreferrer">
                             Node</a></li>
-                          <li><a href="https://expressjs.com/" target="_blank">
+                          <li><a href="https://expressjs.com/" target="_blank" rel="noopener noreferrer">
                             Express</a></li>
-                          <li><a href="https://www.mongodb.com/what-is-mongodb/" target="_blank">
+                          <li><a href="https://www.mongodb.com/what-is-mongodb/" target="_blank" rel="noopener noreferrer">
                             MongoDB</a></li>
-                          <li><a href="https://mongoosejs.com/" target="_blank">
-                            Mongoose</a></li>
-                          <li><a href="https://www.npmjs.com/package/axios/" target="_blank">
+                          <li><a href="https://mongoosejs.com/" target="_blank" rel="noopener noreferrer">
+                            Mongoose ORM</a></li>
+                          <li><a href="https://www.npmjs.com/package/axios/" target="_blank" rel="noopener noreferrer">
                             Axios</a></li>
-                          <li><a href="https://github.com/cheeriojs/cheerio#readme" target="_blank">
+                          <li><a href="https://github.com/cheeriojs/cheerio#readme" target="_blank" rel="noopener noreferrer">
                             Cheerio</a></li>
                         </ul>
                       </div>
@@ -280,13 +367,13 @@
                   </div>
                   <div class="card-footer">
                     <div class="btn-group" role="group" aria-label="links">
-                      <a href="https://github.com/djknit/news-scraper/" class="btn btn-secondary" target="_blank">
+                      <a href="https://github.com/djknit/news-scraper/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
                         <span>Repository</span>
                       </a>
-                      <a href="https://daves-news-scraper.herokuapp.com/" class="btn btn-secondary" target="_blank">
+                      <a href="https://daves-news-scraper.herokuapp.com/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
                         <span>Deployed<br>Page</span>
                       </a>
-                      <a href="./assets/documents/news-scraper.html" class="btn btn-secondary" target="_blank">
+                      <a href="./assets/documents/news-scraper.html" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
                         <span>Readme</span>
                       </a>
                     </div>
@@ -317,20 +404,20 @@
                       <div class="col-6">
                         <label>Front End</label>
                         <ul>
-                          <li><a href="https://handlebarsjs.com/" target="_blank">
+                          <li><a href="https://handlebarsjs.com/" target="_blank" rel="noopener noreferrer">
                             Handlebars</a></li>
-                          <li><a href="https://jquery.com/" target="_blank">
+                          <li><a href="https://jquery.com/" target="_blank" rel="noopener noreferrer">
                             jQuery</a></li>
                         </ul>
                       </div>
                       <div class="col-6">
                         <label>Back End</label>
                         <ul>
-                          <li><a href="https://nodejs.org/en/about/" target="_blank">
+                          <li><a href="https://nodejs.org/en/about/" target="_blank" rel="noopener noreferrer">
                             Node</a></li>
-                          <li><a href="https://expressjs.com/" target="_blank">
+                          <li><a href="https://expressjs.com/" target="_blank" rel="noopener noreferrer">
                             Express</a></li>
-                          <li><a href="https://dev.mysql.com/doc/refman/8.0/en/introduction.html" target="_blank">
+                          <li><a href="https://dev.mysql.com/doc/refman/8.0/en/introduction.html" target="_blank" rel="noopener noreferrer">
                             MySQL</a></li>
                         </ul>
                       </div>
@@ -338,13 +425,13 @@
                   </div>
                   <div class="card-footer">
                     <div class="btn-group" role="group" aria-label="links">
-                      <a href="https://github.com/djknit/burger" class="btn btn-secondary" target="_blank">
+                      <a href="https://github.com/djknit/burger" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
                         <span>Repository</span>
                       </a>
-                      <a href="https://devourdaburger.herokuapp.com/" class="btn btn-secondary" target="_blank">
+                      <a href="https://devourdaburger.herokuapp.com/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
                         <span>Deployed<br>Page</span>
                       </a>
-                      <a href="./assets/documents/burger.html" class="btn btn-secondary" target="_blank">
+                      <a href="./assets/documents/burger.html" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
                         <span>Readme</span>
                       </a>
                     </div>
@@ -370,18 +457,18 @@
                       <div class="col-6">
                         <label>Front End</label>
                         <ul>
-                          <li><a href="https://getbootstrap.com/" target="_blank">
+                          <li><a href="https://getbootstrap.com/" target="_blank" rel="noopener noreferrer">
                             Bootstrap</a></li>
-                          <li><a href="https://jquery.com/" target="_blank">
+                          <li><a href="https://jquery.com/" target="_blank" rel="noopener noreferrer">
                             jQuery</a></li>
                         </ul>
                       </div>
                       <div class="col-6">
                         <label>Back End</label>
                         <ul>
-                          <li><a href="https://nodejs.org/en/about/" target="_blank">
+                          <li><a href="https://nodejs.org/en/about/" target="_blank" rel="noopener noreferrer">
                             Node</a></li>
-                          <li><a href="https://expressjs.com/" target="_blank">
+                          <li><a href="https://expressjs.com/" target="_blank" rel="noopener noreferrer">
                             Express</a></li>
                         </ul>
                       </div>
@@ -389,13 +476,13 @@
                   </div>
                   <div class="card-footer">
                     <div class="btn-group" role="group" aria-label="links">
-                      <a href="https://github.com/djknit/Friend-Finder" class="btn btn-secondary" target="_blank">
+                      <a href="https://github.com/djknit/Friend-Finder" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
                         <span>Repository</span>
                       </a>
-                      <a href="https://people-matcher.herokuapp.com/" class="btn btn-secondary" target="_blank">
+                      <a href="https://people-matcher.herokuapp.com/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
                         <span>Deployed<br>Page</span>
                       </a>
-                      <a href="./assets/documents/friend-finder.html" class="btn btn-secondary" target="_blank">
+                      <a href="./assets/documents/friend-finder.html" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
                         <span>Readme</span>
                       </a>
                     </div>
@@ -422,25 +509,25 @@
                   <div class="card-body">
                     <h6>Technologies Used</h6>
                     <ul>
-                      <li><a href="https://nodejs.org/en/about/" target="_blank">
+                      <li><a href="https://nodejs.org/en/about/" target="_blank" rel="noopener noreferrer">
                         Node</a></li>
-                      <li><a href="https://www.npmjs.com/package/request" target="_blank">
+                      <li><a href="https://www.npmjs.com/package/request" target="_blank" rel="noopener noreferrer">
                         Request (Node package)</a></li>
-                      <li><a href="http://momentjs.com/" target="_blank">
-                        Moment (as a Node package)</a></li>
-                      <li><a href="https://www.npmjs.com/package/dotenv" target="_blank">
+                      <li><a href="http://momentjs.com/" target="_blank" rel="noopener noreferrer">
+                        Moment</a></li>
+                      <li><a href="https://www.npmjs.com/package/dotenv" target="_blank" rel="noopener noreferrer">
                         Dotenv (Node package)</a></li>
                     </ul>
                   </div>
                   <div class="card-footer">
                     <div class="btn-group" role="group" aria-label="links">
-                      <a href="https://github.com/djknit/liri-node-app" class="btn btn-secondary" target="_blank">
+                      <a href="https://github.com/djknit/liri-node-app" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
                         <span>Repository</span>
                       </a>
-                      <a href="https://www.youtube.com/watch?v=GGi05Dj_tzY" class="btn btn-secondary" target="_blank">
+                      <a href="https://www.youtube.com/watch?v=GGi05Dj_tzY" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
                         <span>Demo<br>Video</span>
                       </a>
-                      <a href="./assets/documents/liri.html" class="btn btn-secondary" target="_blank">
+                      <a href="./assets/documents/liri.html" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
                         <span>Readme</span>
                       </a>
                     </div>
@@ -467,19 +554,19 @@
                   <div class="card-body">
                     <h6>Technologies Used</h6>
                     <ul>
-                      <li><a href="https://jquery.com/" target="_blank">
+                      <li><a href="https://jquery.com/" target="_blank" rel="noopener noreferrer">
                         jQuery</a></li>
                     </ul>
                   </div>
                   <div class="card-footer">
                     <div class="btn-group" role="group" aria-label="links">
-                      <a href="https://github.com/djknit/Food-Fight" class="btn btn-secondary" target="_blank">
+                      <a href="https://github.com/djknit/Food-Fight" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
                         <span>Repository</span>
                       </a>
-                      <a href="https://djknit.github.io/Food-Fight" class="btn btn-secondary" target="_blank">
+                      <a href="https://djknit.github.io/Food-Fight" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
                         <span>Deployed<br>App</span>
                       </a>
-                      <a href="./assets/documents/rpg.html" class="btn btn-secondary" target="_blank">
+                      <a href="./assets/documents/rpg.html" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
                         <span>Readme</span>
                       </a>
                     </div>
@@ -500,11 +587,11 @@
               <img src="assets/images/email.png" alt="Email symbol" />
               <p>djknit@gmail.com</p>
             </a>
-            <a href="https://www.linkedin.com/in/david-knittel-675a20167/" class="contact-method" target="_blank">
+            <a href="https://www.linkedin.com/in/david-knittel-675a20167/" class="contact-method" target="_blank" rel="noopener noreferrer">
               <p>Or visit my</p>
               <img src="assets/images/linked_in_logo.png" alt="LinkedIn logo" />
             </a>
-            <a href="https://github.com/djknit/" class="contact-method" target="_blank">
+            <a href="https://github.com/djknit/" class="contact-method" target="_blank" rel="noopener noreferrer">
               <p>Or my</p>
               <img src="assets/images/github_logo.png" alt="GitHub logo" />
             </a>
