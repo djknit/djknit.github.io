@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>README.md</title>
+<title>Book Search Readme</title>
 <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
 
 <style>
 /*---------------------------------------------------------------------------------------------
+ *  This page was translated from a markdown by Markdown PDF (https://marketplace.visualstudio.com/items?itemName=yzane.markdown-pdf).
  *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *  Licensed under the MIT License.
  *--------------------------------------------------------------------------------------------*/
 
 body {
@@ -386,7 +387,7 @@ blockquote {
 </head>
 <body>
 <h1 id="google-books-search">Google Books Search</h1>
-<h3 id="this-app-uses-the-google-books-api-to-search-for-books-and-allow-the-user-to-save-titles-in-a-mongo-database">This app uses the Google Books API to search for books and allow the user to save titles in a Mongo database.</h3>
+<h3 id="this-app-enables-users-to-search-for-books-using-the-google-books-api-and-save-book-information-to-be-referenced-later">This app enables users to search for books using the Google Books API and save book information to be referenced later.</h3>
 <h2 id="contents">Contents</h2>
 <ul>
 <li><a href="#links">Links</a></li>
@@ -398,14 +399,17 @@ blockquote {
 </ul>
 <h2 id="links">Links</h2>
 <ul>
-<li>GitHub Repository: <a href="https://github.com/djknit/Google-Books-Search">github.com/djknit/Google-Books-Search</a></li>
+<li>GitHub repository: <a href="https://github.com/djknit/Google-Books-Search">github.com/djknit/Google-Books-Search</a></li>
+<li>Deployed page: <a href="https://daves-book-search.herokuapp.com">daves-book-search.herokuapp.com</a></li>
 </ul>
 <h2 id="project-goals">Project Goals</h2>
 <ul>
 <li>Create an app that allows the user to search for books using the Google Books API.</li>
-<li>Use React (with React components where appropriate) for the front end.</li>
+<li>Use React for the front end. (This is my first major project built with React.)</li>
 <li>Include separate views for searching for titles and viewing saved titles.</li>
+<li>Allow book information to be saved and viewed later.</li>
 <li>Serve the app from a Node/Express server and store saved information in a Mongo database.</li>
+<li>Implement proper user authentication with password encryption.</li>
 </ul>
 <h2 id="project-features">Project Features</h2>
 <ul>
@@ -416,6 +420,20 @@ blockquote {
 <li>Any user can save books to the &quot;Public List&quot; which is shared by all site visitors.</li>
 <li>Users who are logged in can also save books to their personal list which can not be viewed by other users.</li>
 <li>Privacy settings can be adjusted so that users can choose to share their username or email address or remain anonymous when they post to the Public List.</li>
+<li>User authentication is verified on the server side each time a user tries to interact with their data. This prevents users from accessing other users' data even if they modify the front end code in an attempt to do so.</li>
+<li>Users who are logged in can comment on books saved to the public list. They can also leave notes on books in their private list.</li>
+<li>Comments can be deleted by the comment author.</li>
+<li>Users can remove books and notes from their private list.</li>
+<li>Passwords are hashed using Bcrypt before they are stored in the database.</li>
+<li>Routes are protected on the back end so that users are unable to access data they do not have permission for.</li>
+<li>In case of a forgotten password, users can request a reset link.
+<ul>
+<li>A token is generated on the server (using Crypto package) and is saved with the user's information in the database. An expiration time is also set and saved with the user's data.</li>
+<li>The link is emailed to the user using Nodemailer with Gmail SMPT transport. This link contains the token.</li>
+<li>The link takes the user to the password reset page. If the user clicks the link and enters a new password, the token is matched to the user and the password is reset if and only if the token is valid and has not expired.</li>
+</ul>
+</li>
+<li>The app is automatically deployed to Heroku from the master branch of the Github repo.</li>
 </ul>
 <h2 id="technologies-used">Technologies Used</h2>
 <h4 id="front-end">Front End</h4>
@@ -424,21 +442,30 @@ blockquote {
 <li>Bulma</li>
 <li>Axios</li>
 <li>Moment</li>
+<li>react-router-dom package</li>
+<li>create-react-app package</li>
 </ul>
 <h4 id="back-end">Back End</h4>
 <ul>
-<li>Passport.js Local Strategy</li>
+<li>Passport Local Strategy</li>
 <li>Express</li>
 <li>Node</li>
 <li>MongoDB</li>
+<li>Mongoose</li>
+<li>Bcrypt</li>
+<li>Nodemailer</li>
 <li>Other npm packages used:
 <ul>
+<li>googleapis (for OAuth2 authentication for Gmail)</li>
+<li>axios</li>
 <li>iso-639-1</li>
-<li>Morgan</li>
-<li>Path</li>
-<li>Dotenv</li>
-<li>Connect-ensure-login</li>
-<li>Cookie-parser</li>
+<li>async</li>
+<li>morgan</li>
+<li>path</li>
+<li>dotenv</li>
+<li>connect-ensure-login</li>
+<li>cookie-parser</li>
+<li>connect-flash</li>
 </ul>
 </li>
 </ul>
@@ -456,7 +483,7 @@ blockquote {
 <li>GitHub: <a href="https://github.com/djknit">github.com/djknit</a></li>
 <li>LinkedIn: <a href="https://www.linkedin.com/in/djknit/">linkedin.com/in/djknit</a></li>
 </ul>
-<p>This project was originally developed as a homework assignment for the KU Coding Bootcamp Full Stack Flex program and uses specifications laid out by the homework requirements.</p>
+<p>This project is based on a homework assignment for the KU Coding Bootcamp Full Stack Flex program and uses some specifications laid out by the homework requirements.</p>
 
 </body>
 </html>

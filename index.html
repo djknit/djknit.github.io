@@ -110,7 +110,7 @@
                     <img src="assets/images/book_search.png" alt="Book Search screenshot" />
                   </div>
                   <div class="card-body">
-                    This app uses the Google Books API to allow users to search for books. Information and links for the books are displayed together. Users may save books to the database so that the information can be seen later. They can be saved to the public list which is shared among all users or to a personal list which is visible only to one user. In order to use the personal list, users must create an account. Authentication is managed using Passport.js.
+                    This app uses the Google Books API to allow users to search for books. Information and links for the books are displayed together. Users may save book information to the database. Books can be saved to the public list which is shared among all users or to the user's private list. Authentication is managed using the Passport.js Local Strategy. Passwords are hashed before being saved to the database. Authentication is verified each time a user attempts to access their data. A password reset link is generated upon a user's request and sent to the email address associate with the user's account.
                   </div>
                   <div class="card-body">
                     <h6>My Role</h6>
@@ -133,31 +133,32 @@
                           <li><a href="http://momentjs.com/" target="_blank" rel="noopener noreferrer">
                             Moment</a></li>
                         </ul>
-                      </div>
-                      <div class="col-6">
-                        <label>Back End</label>
-                        <ul>
-                          <li><a href="http://www.passportjs.org/" target="_blank" rel="noopener noreferrer">
-                            Passport</a></li>
-                          <li><a href="https://nodejs.org/en/about/" target="_blank" rel="noopener noreferrer">
-                            Node</a></li>
-                          <li><a href="https://expressjs.com/" target="_blank" rel="noopener noreferrer">
-                            Express</a></li>
-                          <li><a href="https://www.mongodb.com/what-is-mongodb/" target="_blank" rel="noopener noreferrer">
-                            MongoDB</a></li>
-                          <li><a href="https://mongoosejs.com/" target="_blank" rel="noopener noreferrer">
-                            Mongoose</a></li>
-                          <li><a href="https://www.npmjs.com/package/axios/" target="_blank" rel="noopener noreferrer">
-                            Axios</a></li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-6">
+                        <br />
                         <label>Public APIs</label>
                         <ul class="apis">
                           <li><a href="https://developers.google.com/books/" target="_blank" rel="noopener noreferrer">
                             Google Books API</a></li>
+                        </ul>
+                      </div>
+                      <div class="col-6">
+                        <label>Back End</label>
+                        <ul>
+                          <li><a href="https://nodejs.org/en/about/" target="_blank" rel="noopener noreferrer">
+                            Node</a></li>
+                          <li><a href="https://expressjs.com/" target="_blank" rel="noopener noreferrer">
+                            Express</a></li>
+                          <li><a href="http://www.passportjs.org/" target="_blank" rel="noopener noreferrer">
+                            Passport</a></li>
+                          <li><a href="https://www.mongodb.com/what-is-mongodb/" target="_blank" rel="noopener noreferrer">
+                            MongoDB</a></li>
+                          <li><a href="https://mongoosejs.com/" target="_blank" rel="noopener noreferrer">
+                            Mongoose</a></li>
+                          <li><a href="https://nodemailer.com/about/" target="_blank" rel="noopener noreferrer">
+                            Nodemailer</a></li>
+                          <li><a href="https://www.npmjs.com/package/bcrypt/" target="_blank" rel="noopener noreferrer">
+                            Bcrypt</a></li>
+                          <li><a href="https://www.npmjs.com/package/axios/" target="_blank" rel="noopener noreferrer">
+                            Axios</a></li>
                         </ul>
                       </div>
                     </div>
@@ -209,6 +210,14 @@
                           <li><a href="https://zhanziyang.github.io/vue-croppa/#/" target="_blank" rel="noopener noreferrer">
                             Vue Croppa</a></li>
                         </ul>
+                        <br />
+                        <label>Public APIs</label>
+                        <ul class="apis">
+                          <li><a href="https://www.meetup.com/meetup_api/" target="_blank" rel="noopener noreferrer">
+                            Meetup API</a></li>
+                          <li><a href="https://www.linkpreview.net/" target="_blank" rel="noopener noreferrer">
+                            LinkPreview API</a></li>
+                        </ul>
                       </div>
                       <div class="col-6">
                         <label>Back End</label>
@@ -230,18 +239,6 @@
                         </ul>
                       </div>
                     </div>
-                    <div class="row">
-                      <div class="col-6">
-                        <label>Public APIs</label>
-                        <ul class="apis">
-                          <li><a href="https://www.meetup.com/meetup_api/" target="_blank" rel="noopener noreferrer">
-                            Meetup API</a></li>
-                          <li><a href="https://www.linkpreview.net/" target="_blank" rel="noopener noreferrer">
-                            LinkPreview API</a></li>
-                        </ul>
-                      </div>
-                    </div>
-                    
                   </div>
                   <div class="card-footer">
                     <div class="btn-group" role="group" aria-label="links">
