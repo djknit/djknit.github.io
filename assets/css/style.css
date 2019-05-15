@@ -317,6 +317,7 @@ ul a:hover {
     margin: 0 20px 20px;
     padding: 0 20px 20px;
     text-align: center;
+    box-shadow: 3px 6px 3px #525252;
 }
 
 #contact h2 {
