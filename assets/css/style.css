@@ -114,6 +114,8 @@ button#side-nav-toggle > i.fa-compass {
     width: 26px;
     font-size: 26px;
     color: #56208a;
+    animation-name: blink;
+    animation-duration: 4s;
 }
 
 #side-nav-menu > nav {
@@ -480,6 +482,31 @@ ul a:hover {
     to {
         height: 127px;
         width: 98.594px;
+    }
+}
+
+/* blink animation to help user notice side nav menu button */
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    16.7% {
+        opacity: 0;
+    }
+    33.3% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    66.7% {
+        opacity: 1;
+    }
+    83.3% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }
 
