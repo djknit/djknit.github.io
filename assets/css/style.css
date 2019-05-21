@@ -96,18 +96,14 @@ button#side-nav-toggle {
     z-index: 2;
 }
 
-button#side-nav-toggle:hover {
+button#side-nav-toggle:hover,
+button#side-nav-toggle:focus {
+    outline: none;
     background-color: #eaeaea;
 }
 
 button#side-nav-toggle:active {
     box-shadow: 0px 0px .5px black;
-}
-
-button#side-nav-toggle:active,
-button#side-nav-toggle:focus {
-    outline: none;
-    /* border: none; */
 }
 
 button#side-nav-toggle > i.fa-compass {
@@ -602,9 +598,34 @@ ul a:hover {
 }
 
 /************************************************************/
-/* Breakpoints (match Bootstrap breakpoints) */
+/* Breakpoints */
 /************************************************************/
 
+/* larger side menu toggle button for larger screens */
+@media screen and (min-width: 1016px) {
+    #side-nav-menu {
+        left: 7px;
+    }
+
+    button#side-nav-toggle {
+        height: 40px;
+        width: 40px;
+    }
+    
+    button#side-nav-toggle > i.fa-compass {
+        height: 36px;
+        width: 36px;
+        font-size: 36px;
+    }
+
+    #side-nav-menu > nav {
+        top: 20px;
+        left: 20px;
+    }
+}
+
+/* Main breakpoints: Match Bootstrap breakpoints mostly */
+/*      ***********************      */
 /* LARGE (2nd widest) */
 @media screen and (max-width: 1199px) {
     #about-basic {
@@ -810,7 +831,12 @@ ul a:hover {
         height: 18px;
         width: 18px;
         font-size: 18px;
-    }    
+    }
+
+    #side-nav-menu > nav {
+        top: 10px;
+        left: 10px;
+    }
 
     #projects {
         margin-left: 0;
