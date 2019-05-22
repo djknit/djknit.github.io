@@ -6,9 +6,8 @@
 
 <style>
 /*---------------------------------------------------------------------------------------------
- *  This page was translated from a markdown by Markdown PDF (https://marketplace.visualstudio.com/items?itemName=yzane.markdown-pdf).
  *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
 body {
@@ -413,7 +412,8 @@ blockquote {
 </ul>
 <h2 id="project-features">Project Features</h2>
 <ul>
-<li>Allows users to enter a search term (title, author, publisher, etc.) to search for books using the Google Books API.</li>
+<li>Allows users to enter search term(s) (title, author, publisher, etc.) to search for books using the Google Books API.</li>
+<li>Also has an advanced search option which allows for more specific searches.</li>
 <li>The top 10 matches for the query are displayed to the user.</li>
 <li>Users can save books to the database.</li>
 <li>Users can create an account or use the site as a guest.</li>
@@ -421,7 +421,7 @@ blockquote {
 <li>Users who are logged in can also save books to their personal list which can not be viewed by other users.</li>
 <li>Privacy settings can be adjusted so that users can choose to share their username or email address or remain anonymous when they post to the Public List.</li>
 <li>User authentication is verified on the server side each time a user tries to interact with their data. This prevents users from accessing other users' data even if they modify the front end code in an attempt to do so.</li>
-<li>Users who are logged in can comment on books saved to the public list. They can also leave notes on books in their private list.</li>
+<li>Users who are logged in can comment on books saved to the Public List. They can also leave notes on books in their private list.</li>
 <li>Comments can be deleted by the comment author.</li>
 <li>Users can remove books and notes from their private list.</li>
 <li>Passwords are hashed using Bcrypt before they are stored in the database.</li>
@@ -474,7 +474,47 @@ blockquote {
 <li>Google Books API</li>
 </ul>
 <h2 id="instructions-for-use">Instructions for Use</h2>
-<h3 id="coming-soon">(Coming Soon...)</h3>
+<p>Visit <a href="https://daves-book-search.herokuapp.com">daves-book-search.herokuapp.com</a> to run the app.</p>
+<ul>
+<li>On the landing page you can choose to create an account or continue as a guest.
+<ul>
+<li>As a guest, you can search for books, view the Public List, and save books to the Public List.</li>
+<li>You must create an account to comment on the Public List. If you create an account, you will also be able to save books to a private personal list (&quot;Your List&quot;).</li>
+<li>The only information required to set up an account is a username or email and a password. If you choose not to provide an email address, you will not be able to recover your account if you loose your password.</li>
+</ul>
+</li>
+<li>Use the menu at the top of the page to navigate between views.
+<ul>
+<li>There are two views namely &quot;Search&quot; and &quot;Public List&quot; that are always available. If you are signed in, you will also have a view for &quot;Your List&quot;.</li>
+<li>The &quot;Public List&quot; and &quot;Your List&quot; links appear in the dropdown menu under &quot;Saved Titles&quot;.</li>
+<li>If you are signed in, there will also be an &quot;Account&quot; dropdown menu on the navigation bar. This is where you can update your account information and privacy settings.</li>
+</ul>
+</li>
+<li>On the &quot;Search&quot; view:
+<ul>
+<li>Use the tabs above the box containing the search bar to switch between the basic and advanced search.
+<ul>
+<li>The advanced search allows you to be more specific than the basic search.</li>
+<li>On the advanced search, you can enter a term in any number of the form fields as long as you use at least one.</li>
+</ul>
+</li>
+<li>The results displayed will include the following for each book.
+<ul>
+<li>Information about the book</li>
+<li>Links to Google Books resources</li>
+<li>A &quot;Save&quot; button</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>On the &quot;Public List&quot; and &quot;Your List&quot; views:
+<ul>
+<li>The entries on the lists contain the same information in the same format as the results on the &quot;Search&quot; view.</li>
+<li>Each entry also has a comments section at the bottom of the entry.</li>
+</ul>
+</li>
+<li>If you are signed in, an &quot;Account&quot; dropdown menu will also be available on the navigation bar. Use this menu to edit any of your account information.</li>
+</ul>
 <h2 id="developer">Developer</h2>
 <p>This project is developed and maintained by David Knittel. Any and all questions, comments, suggestions, or proposed contributions are welcome.</p>
 <ul>
