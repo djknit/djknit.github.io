@@ -1,3 +1,9 @@
+/* Organization of this file:
+    1st: All styles except animations and breakpoints
+        * These are grouped by html document sections from top to bottom of page.
+    2nd: Animations
+    3rd: Breakpoints
+*/
 body {
     background-color: #6c757d;
     padding: 0;
@@ -79,10 +85,6 @@ header nav a:last-child {
     display: none;
 }
 
-#side-nav-menu[state="show"] {
-    display: block;
-}
-
 button#side-nav-toggle {
     height: 30px;
     width: 30px;
@@ -115,7 +117,7 @@ button#side-nav-toggle > i.fa-compass {
     font-size: 26px;
     color: #56208a;
     animation-name: blink;
-    animation-duration: 4s;
+    animation-duration: 2s;
 }
 
 #side-nav-menu > nav {
@@ -418,6 +420,7 @@ ul a:hover {
     height: 137px;
     margin: 0 20px 20px 0;
     box-shadow: 3px 6px 3px #525252;
+    border: .5px solid #525252;
     position: relative;
 }
 
@@ -515,19 +518,10 @@ body > footer > a:hover {
     0% {
         opacity: 1;
     }
-    16.7% {
-        opacity: 0;
-    }
-    33.3% {
+    33% {
         opacity: 1;
     }
-    50% {
-        opacity: 0;
-    }
-    66.7% {
-        opacity: 1;
-    }
-    83.3% {
+    67% {
         opacity: 0;
     }
     100% {
@@ -728,7 +722,8 @@ body > footer > a:hover {
     }
 }
 
-@media screen and (max-width: 768px) {
+/* SMALL */
+@media screen and (max-width: 767.5px) {
     header {
         text-align: center;
         padding-bottom: 5px;
@@ -741,10 +736,11 @@ body > footer > a:hover {
     header nav {
         float: none;
     }
-}
 
-/* SMALL */
-@media screen and (max-width: 767px) {    
+    #side-nav-menu[state="hide-768"] {
+        display: none;
+    }
+
     #profile-pic {
         top: 0;
         height: 200px;
@@ -799,6 +795,10 @@ body > footer > a:hover {
         width: 410px;
     }
 
+    body {
+        min-width: 410px;
+    }
+
     .cards.container {
         width: 100%;
     }
@@ -814,6 +814,10 @@ body > footer > a:hover {
 
     header nav {
         float: none;
+    }
+
+    #side-nav-menu[state="hide-552"] {
+        display: none;
     }
 
     #profile-pic {
@@ -853,6 +857,10 @@ body > footer > a:hover {
         width: 400px;
     }
 
+    body {
+        min-width: 400px;
+    }
+
     /* open/close animation for about section */
     @keyframes open {
         from { height: 630px; }
@@ -872,6 +880,29 @@ body > footer > a:hover {
         padding: 0;
     }
 
+    body {
+        min-width: 330px;
+    }
+
+    header nav > a:first-child {
+        margin-left: 18px;
+    }
+
+    header nav > a:nth-child(3) {
+        border: none;
+    }
+
+    header nav > a:last-child {
+        text-align: center;
+        border-top: solid white .2px;
+        margin-top: 7.5px;
+        padding-top: 7.5px;
+    }
+
+    #side-nav-menu[state="hide-381"] {
+        display: none;
+    }
+
     button#side-nav-toggle {
         height: 20px;
         width: 20px;
@@ -888,6 +919,16 @@ body > footer > a:hover {
     #side-nav-menu > nav {
         top: 10px;
         left: 10px;
+    }
+
+    h1#main-heading {
+        margin-top: 30px;
+    }
+
+    h1#main-heading > span {
+        display: inline-block;
+        max-width: 115px;
+        margin-bottom: 50px;
     }
 
     #projects {
@@ -913,7 +954,7 @@ body > footer > a:hover {
 
 @media screen and (max-width: 348px) {
     #about-header {
-        width: calc(100vw - 10px);
+        width: calc(100% - 10px);
     }
     
     #about-basic {

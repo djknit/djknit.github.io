@@ -33,28 +33,27 @@ $(".contact-method").hover(
 );
 
 // show side nav when header scrolled far away from header
-setTimeout(function() {
+setTimeout(setSideMenuState, 700);
+$(window).scroll(setSideMenuState);
+
+function setSideMenuState() {
   const sideNavMenu = $("#side-nav-menu");
-  if (window.pageYOffset > 500) {
-    sideNavMenu.attr("state", "show");
-    $("#side-nav-menu > nav").attr("style", null);
+  if (window.pageYOffset < 284) {
+    sideNavMenu.attr("state", "hide");
   }
-}, 700);
-$(window).scroll(function() {
-  const sideNavMenu = $("#side-nav-menu");
-  if (window.pageYOffset > 500) {
-    if (sideNavMenu.attr("state") === "hide") {
-      sideNavMenu.attr("state", "show");
-      $("#side-nav-menu > nav").attr("style", null);
-    }
+  else if (window.pageYOffset < 330) {
+    sideNavMenu.attr("state", "hide-768");
+  }
+  else if (window.pageYOffset < 443) {
+    sideNavMenu.attr("state", "hide-552");
+  }
+  else if (window.pageYOffset < 523) {
+    sideNavMenu.attr("state", "hide-381");
   }
   else {
-    if (sideNavMenu.attr("state") === "show") {
-      sideNavMenu.attr("state", "hide");
-      $("#side-nav-menu > nav").attr("style", null);
-    }
+    sideNavMenu.attr("state", "show");
   }
-});
+}
 
 // open/close side nav menu
 $("#side-nav-toggle").on("click", function() {
@@ -63,7 +62,6 @@ $("#side-nav-toggle").on("click", function() {
     $("#side-nav-menu > nav").attr("style", "animation-name: close-side; animation-duration: 1s; -webkit-animation-fill-mode: forwards;");
     $("#side-nav-menu > nav").attr("state", "closed");
     $("#side-nav-toggle").attr("title", "Open navigation menu");
-
   }
   else {
     $(this).attr("state", "open");
