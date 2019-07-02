@@ -32,7 +32,7 @@ $(".contact-method").hover(
   }
 );
 
-// show side nav when header scrolled far away from header
+// show side nav when scrolled far away from header
 setTimeout(setSideMenuState, 700);
 $(window).scroll(setSideMenuState);
 
@@ -40,7 +40,11 @@ function setSideMenuState() {
   const sideNavMenu = $("#side-nav-menu");
   // remove animation so it doesn't replay
   $("#side-nav-menu > nav").attr("style", null);
-  // mark #side-nav-menu with min screen width to show menu on so that it sits right below about section header
+  // Mark side nav when user scrolls past the point when the picture
+  // at the top of the About Section is just off top of window. (To avoid overlap of menu w/ picture)
+  // This depends on screen width, so the menu is marked when it passes
+  // each of the different points at which the picture is just off the
+  // top of the window for some screen sizes.
   if (window.pageYOffset < 284) {
     sideNavMenu.attr("state", "hide");
   }
