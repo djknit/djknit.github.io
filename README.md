@@ -12,7 +12,7 @@
 
 ## Links
 * Live Page: [djknit.github.io](https://djknit.github.io)
-* GitHub Repository: [github.com/djknit.github.io](https://github.com/djknit.github.io)
+* GitHub Repository: [github.com/djknit/djknit.github.io](https://github.com/djknit/djknit.github.io)
 
 ## Project Goals
 * Design my own unique portfolio page
@@ -42,7 +42,7 @@
 You may copy the code for this page from the [repostitory](https://github.com/djknit/djknit.github.io) and use it as a template for your own portfolio. If you choose to redistribute the code, you must do so in accordance with the license and the license must be included with any redistribution.
 
 ## Developer
-This project is developed and maintained by David Knittel. Any and all questions, comments, suggestions, or proposed contributions are welcome.
+This project is developed and maintained by David Knittel. Any and all questions, comments, and/or suggestions are welcome.
 * Email: [djknit@gmail.com](mailto:djknit@gmail.com)
 * Portfolio: [djknit.github.io](https://djknit.github.io/)
 * GitHub: [github.com/djknit](https://github.com/djknit)
