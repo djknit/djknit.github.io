@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>README.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="timeclock">Timeclock</h1>
+<h3 id="timeclock-is-a-time-manager-this-app-will-replace-the-spreadsheet-that-i-use-to-track-my-work-time"><em>Timeclock</em> is a time manager. This app will replace the spreadsheet that I use to track my work time.</h3>
+<h2 id="contents">Contents</h2>
+<ul>
+<li><a href="#links">Links</a></li>
+<li><a href="#project-goals">Project Goals</a></li>
+<li><a href="#project-features">Project Features</a></li>
+<li><a href="#technologies-used">Technologies Used</a></li>
+<li><a href="#instructions-for-use">Instructions for Use</a></li>
+<li><a href="#icebox">Icebox</a></li>
+<li><a href="#developer">Developer</a></li>
+</ul>
+<h2 id="links">Links</h2>
+<ul>
+<li>GitHub repository: <a href="https://github.com/djknit/timeclock">github.com/djknit/timeclock</a></li>
+<li>Deployed page: <a href="https://daves-timeclock.herokuapp.com/">daves-timeclock.herokuapp.com/</a></li>
+</ul>
+<h2 id="project-goals">Project Goals</h2>
+<ul>
+<li>Make it as convenient as possible to enter time worked.</li>
+<li>Minimum Viable Product (MVP) should have:
+<ul>
+<li>Continually update/display time worked for day, week, and month.</li>
+<li>Allow user to set day and week cutoff.</li>
+<li>Allow user to analyze arbitrary range of days.</li>
+<li>Ability to separate multiple different jobs</li>
+<li>Optional wage entry and compensation earned calculation</li>
+<li>User authentication</li>
+<li>Server and database</li>
+<li>Proper security measures on backend to prevent unauthorized data access.</li>
+</ul>
+</li>
+<li>Get working MVP before adding optional features.</li>
+<li>After MVP, add punchclock feature to allow user to &quot;punch in&quot; and &quot;punch out&quot; so that they don't have to write down their time and enter it later.</li>
+</ul>
+<h2 id="project-features">Project Features</h2>
+<ul>
+<li>User authentication
+<ul>
+<li>Uses Passport.js to manage login sessions</li>
+<li>User passwords are hashed using bcrypt before they are stored in the database.</li>
+<li>Login with either username or email address if account has both setup (only 1 of the 2 is required)</li>
+<li>All access to user data is restricted on the server side so that users are not able to access data that is not theirs using the API</li>
+</ul>
+</li>
+<li>Allows users to track time worked for one or more separate jobs, with no limit to the number of jobs allowed</li>
+<li>Optional wage settings allow for earnings calculations.</li>
+<li>Dynamic forms throughout the app allows for a simple form with the least number of inputs possible to be displayed to users initially, so the app is not unnecessarily complex, while still allowing options to edit every parameter possible in order to accommodate unique situations especially for more advanced users. Additional inputs are added to forms as needed when the user chooses to customize more parameters.</li>
+<li>Users enter their time using a simple user friendly form.</li>
+<li>Time and earnings are reported automatically by job as well as the totals from all of the user's jobs. Totals are reported by week, month, year, and all time by default.</li>
+<li>All time entered can be viewed and edited by the user.</li>
+<li>Support for practically all timezones and currencies, including situations where more than one is used on the user's account or even the same job if that situation arises.</li>
+<li>The app is automatically deployed to Heroku from the master branch of the Github repo.</li>
+</ul>
+<h2 id="technologies-used">Technologies Used</h2>
+<h4 id="front-end">Front End</h4>
+<ul>
+<li>React</li>
+<li>Bulma</li>
+<li>Axios</li>
+<li>Moment Timezone</li>
+<li>react-router-dom package</li>
+<li>create-react-app package</li>
+</ul>
+<h4 id="back-end">Back End</h4>
+<ul>
+<li>Passport and passport-local</li>
+<li>Express</li>
+<li>Node</li>
+<li>MongoDB</li>
+<li>Mongoose</li>
+<li>Bcrypt</li>
+<li>Moment and moment-timezone</li>
+<li>Currency-codes</li>
+</ul>
+<h2 id="instructions-for-use">Instructions for Use</h2>
+<p>Visit <a href="https://daves-timeclock.herokuapp.com">daves-timeclock.herokuapp.com</a> to run the app.</p>
+<ul>
+<li>On the landing page you can create an account or login.
+<ul>
+<li>You must create an account to use the app</li>
+<li>The only information required to set up an account is a username OR email and a password.</li>
+<li>First time users, create a new account. You will be automatically logged in when the account is created.</li>
+</ul>
+</li>
+<li>In order to track your time, you must create a job. Click the &quot;+ New&quot; button under the jobs section of the dashboard page, and fill out the form to fit the job or activity that you are tracking time for.</li>
+<li>You can navigate using the nav bar on the top of the page or by clicking through the links on the pages as well as breadcrumb items included with page heading.</li>
+<li>Enter time spent on your &quot;job&quot; by visiting the time page for that job.</li>
+<li>You may create unlimited jobs.</li>
+<li>The settings for each job can be changed by selecting the job and then going to settings.</li>
+</ul>
+<h2 id="icebox">Icebox</h2>
+<ul>
+<li><input type="checkbox" id="checkbox0"><label for="checkbox0">Develop and/or finish developing the most important remaining front-end features for a more complete MVP</label>
+<ul>
+<li><input type="checkbox" id="checkbox1"><label for="checkbox1">Improve full report</label>
+<ul>
+<li><input type="checkbox" id="checkbox2"><label for="checkbox2">Add buttons to edit time throughout report where convenient for user</label></li>
+<li><input type="checkbox" id="checkbox3"><label for="checkbox3">User defined time period (default is all time) for full report</label>
+<ul>
+<li><input type="checkbox" id="checkbox4"><label for="checkbox4">Period inputs</label></li>
+<li><input type="checkbox" id="checkbox5"><label for="checkbox5">Utility function to get arbitrary period data</label></li>
+</ul>
+</li>
+<li><input type="checkbox" id="checkbox6"><label for="checkbox6">PDF or printer friendly version</label></li>
+</ul>
+</li>
+<li><input type="checkbox" id="checkbox7"><label for="checkbox7">User preference for AM/PM or 24hr times setting at user level and/or job level</label></li>
+</ul>
+</li>
+<li><input type="checkbox" id="checkbox8"><label for="checkbox8">Work on additional features</label>
+<ul>
+<li><input type="checkbox" id="checkbox9"><label for="checkbox9">Punchclock</label></li>
+<li><input type="checkbox" id="checkbox10"><label for="checkbox10">Add special handling for the edge-case situation where a time-change (ex. daylight savings beginning or end) occurs during a work shift. Likewise if any time is recorded both before and after the time-change on the same day.</label></li>
+<li><input type="checkbox" id="checkbox11"><label for="checkbox11">Create (or improve existing) mobile friendly UI</label></li>
+<li><input type="checkbox" id="checkbox12"><label for="checkbox12">Add time section to job dashboard</label>
+<ul>
+<li><input type="checkbox" id="checkbox13"><label for="checkbox13">Summary</label></li>
+<li><input type="checkbox" id="checkbox14"><label for="checkbox14">Basic actions such as general entry</label></li>
+</ul>
+</li>
+<li><input type="checkbox" id="checkbox15"><label for="checkbox15">Let user define how much info to include in time report</label>
+<ul>
+<li><input type="checkbox" id="checkbox16"><label for="checkbox16">Inputs</label></li>
+<li><input type="checkbox" id="checkbox17"><label for="checkbox17">Display (update regular display)</label></li>
+</ul>
+</li>
+<li><input type="checkbox" id="checkbox18"><label for="checkbox18">Add notes field to time segments &amp; maybe also days and/or weeks</label></li>
+<li><input type="checkbox" id="checkbox19"><label for="checkbox19">Pay periods (should be optional)</label></li>
+<li><input type="checkbox" id="checkbox20"><label for="checkbox20">Mark time as finalized and/or paid, and maybe allow finalized time to be locked so it can't be changed</label></li>
+<li><input type="checkbox" id="checkbox21"><label for="checkbox21">Add manager/supervisor account with privileges to define job, and link manager account to employee account for employee self-reporting of hours. Require manager to finalize hours.</label></li>
+</ul>
+</li>
+</ul>
+<h2 id="developer">Developer</h2>
+<p>This project is developed and maintained by David Knittel. Any and all questions, comments, suggestions, or proposed contributions are welcome.</p>
+<ul>
+<li>Email: <a href="mailto:djknit@gmail.com">djknit@gmail.com</a></li>
+<li>Portfolio: <a href="https://djknit.github.io/">djknit.github.io</a></li>
+<li>GitHub: <a href="https://github.com/djknit">github.com/djknit</a></li>
+<li>LinkedIn: <a href="https://www.linkedin.com/in/djknit/">linkedin.com/in/djknit</a></li>
+</ul>
+
+</body>
+</html>
